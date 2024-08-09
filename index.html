@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>SignUp</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" id="sign-up-form" class="form-section">
+        <div class="mb-3 w-100">
+          <label for="first-name" class="form-label text-white">Nama Depan</label>
+          <input
+            type="text"
+            class="form-control"
+            id="first-name"
+            placeholder="First Name"
+            oninput="validateInput(this)"
+          />
+          <span class="" id="alert-fn"></span>
+        </div>
+        <div class="mb-4 w-100">
+          <label for="last-name" class="form-label text-white">Nama Belakang</label>
+          <input
+            type="text"
+            name="last-name"
+            class="form-control"
+            placeholder="Last Name"
+            oninput="validateInput(this)"
+          />
+          <span class="" id="alert-ln"></span>
+        </div>
+        </br>
+        <div class="mb-1 w-100% d-flex gap-3">
+          <label for="umur" class="form-label text-white mt-1">Umur</label>
+          <input
+            type="number"
+            name="age"
+            class="form-control"
+            placeholder="Umur"
+            min="1"
+          />
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <span class="" id="alert-age"></span>
+      </form>
+      <div class="fetch-section mt-5 d-none">
+        <div class="card">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <div class="fetch-data-fn" style="font-size: 15px">
+              <span id="hello-msg"></span>
+            </div>
+          </br>
+          <div class="fetch-data-fn">
+              <span>Nama :</span>
+              <span class="fw-bold" id="fullname-value"></span>
+            </div>
+            <div class="fetch-data-fn">
+              <span>Umur :</span>
+              <span class="fw-bold" id="age-value"></span>
+            </div>
+          </br>
+          <button class="btn btn-primary d-flex" id="btn-reset" type="button">
+              Masukan data baru
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./formHandler.js" defer></script>
+  </body>
+</html>
