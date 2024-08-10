@@ -16,7 +16,7 @@ function formValidation() {
   if (firstNameInput.value === "") {
     alertFnMsg.classList.remove("text-success");
     alertFnMsg.classList.add("text-danger");
-    alertFnMsg.innerHTML = "Error";
+    alertFnMsg.innerHTML = "Nama depan tidak boleh kosong";
   } else {
     alertFnMsg.classList.remove("text-danger");
     alertFnMsg.classList.add("text-success");
@@ -25,7 +25,7 @@ function formValidation() {
   if (lastNameInput.value === "") {
     alertLnMsg.classList.remove("text-success");
     alertLnMsg.classList.add("text-danger");
-    alertLnMsg.innerHTML = "Error";
+    alertLnMsg.innerHTML = "Nama belakang tidak boleh kosong";
   } else {
     alertLnMsg.classList.remove("text-danger");
     alertLnMsg.classList.add("text-success");
@@ -34,7 +34,7 @@ function formValidation() {
   if (ageInput.value < 18) {
     alertAgeMsg.classList.remove("text-success");
     alertAgeMsg.classList.add("text-danger");
-    alertAgeMsg.innerHTML = "Error";
+    alertAgeMsg.innerHTML = "Kamu harus berusia minimal 18 tahun";
   } else {
     alertAgeMsg.classList.remove("text-danger");
     alertAgeMsg.classList.add("text-success");
